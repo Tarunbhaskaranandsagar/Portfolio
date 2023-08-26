@@ -18,7 +18,7 @@ ScrollTrigger.create({
   ScrollTrigger.create({
     
     trigger: 'footer',
-    marker:true,
+    markers:true,
     start:"top 72.5%",
     end:"bottom 0%", 
   
