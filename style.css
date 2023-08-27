@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@700&family=Poppins:wght@200&display=swap');
 *{
     margin: 0;
     padding: 0;
+    font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
 }
 body{
@@ -9,6 +11,15 @@ body{
 #first{
     height: 100vh;
     overflow: hidden;
+}
+nav #link .v{
+    display: inline-block;
+    position: relative;
+    color: black;
+    font-size: 17px;
+    text-decoration: none;
+
+    transition: 1s ease-in;
 }
 nav #link .v::after {
     content: '';
@@ -28,31 +39,24 @@ nav #link .v:hover::after {
     transform-origin: bottom left;
   }
 nav{
+
     padding: 20px 30px;
     position:relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-nav #link .v{
-    display: inline-block;
-    position: relative;
-    color: black;
-    font-size: 17px;
-    text-decoration: none;
 
-    transition: 1s ease-in;
-}
 nav #link .l{
     padding: 0px 10px;
 }
 nav #logo{
+    color: #000;
+    font-weight: 800 !important;
     font-size: 30px;
 }
 @media (min-width:1020px) {
-    nav #logo{
-        font-size: 30px;
-    }
+    
     nav #link .v{
         display: inline-block;
         position: relative;
@@ -91,7 +95,7 @@ nav #logo{
         display: none;
     }
 }
-#home img{
+#home img:nth-child(1){
     animation: anim 2s ease-in infinite;
 }
 @keyframes anim {
@@ -100,7 +104,9 @@ nav #logo{
     }
 }
 @media (max-width:1020px) {
-    
+    nav #logo{
+        font-size: 20px;
+    }
     nav #link .v
     {
         margin-left: 2vw;
@@ -112,9 +118,13 @@ nav #logo{
     .allcards{
         padding: 100px 20px 0 20px;
     }
-    #home img{
-        padding-top: 50px;
+    @keyframes anim {
+        50%{
+            transform: translateY(-20px);
+
+        }
     }
+        
     #second{
         flex-wrap: wrap;
         padding-bottom: 100px;
@@ -125,12 +135,17 @@ nav #logo{
     }
     #second p{
         font-size: 15px;
-        padding: 100px 20px;
+        padding: 50px 10px;
     }
     #home #text{
+        font-weight: 100;
+        transform: translateY(-70px);
         text-align: center;
         font-size: 50px;
     }
+}
+#second p{
+    width: 150%;
 }
 #second{
     height: 100vh;
@@ -189,4 +204,35 @@ footer .flink{
     align-items: center;
     padding: 50px 100px;
     justify-content: space-between;
+}
+a.active{
+    font-weight: 600;
+}
+
+
+@media (max-width:1020px) {
+    #continfo
+    {
+        padding-top: 30px;
+        font-size: 20px !important;
+    }
+    #cont h1{
+        padding-top: 50px !important;
+        font-size: 10vmin !important;
+    }
+}
+#cont h1{
+    padding-top: 20px;
+    text-decoration:underline;
+    text-decoration-color: #0087ca ;
+    font-size: 4vmax;
+    font-weight: 700;
+    text-align: center;
+}
+#continfo
+{
+    line-height-step: 2;
+    font-size: 30px;
+    padding: 150px 20px;
+    text-align: center;
 }
