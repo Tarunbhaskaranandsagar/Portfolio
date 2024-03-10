@@ -31,3 +31,16 @@ ScrollTrigger.create({
   
     
   })
+
+  Shery.mouseFollower({
+    //Parameters are optional.
+    skew: true,
+    ease: "cubic-bezier(1,1,1,1)",
+    duration: 0.2,
+  });
+  Shery.makeMagnet(".magnet-target" /* Element to target.*/, {
+    //Parameters are optional.
+    ease: "cubic-bezier(1,1,1,1)",
+    duration: 0.2,
+  });
+  
