@@ -39,7 +39,7 @@ ScrollTrigger.create({
     duration: 0.2,
   });
   Shery.makeMagnet(".magnet-target" /* Element to target.*/, {
-    //Parameters are optional.
+    //Parameters are optional
     ease: "cubic-bezier(1,1,1,1)",
     duration: 0.2,
   });
